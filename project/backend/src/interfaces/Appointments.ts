@@ -4,6 +4,6 @@ export interface CreateAppointmentDTO {
 }
 
 export interface RequestToCreateAppointmentDTO {
-  provider: string
+  provider_id: string
   date: Date
 }
