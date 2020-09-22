@@ -4,6 +4,7 @@ import { sign } from 'jsonwebtoken'
 import User from '../models/User'
 import { RequestToCreateSession } from '../interfaces/Sessions'
 import authConfig from '../config/auth'
+import AppError from '../errors/AppError'
 
 class AuthenticateUserService {
   public async execute({
@@ -17,13 +18,13 @@ class AuthenticateUserService {
     })
 
     if (!user) {
-      throw new Error('Incorrect e-mail/password combination')
+      throw new AppError('Incorrect e-mail/password combination', 401)
     }
 
     const passwordMatched = await compare(password, user.password)
 
     if (!passwordMatched) {
-      throw new Error('Incorrect e-mail/password combination')
+      throw new AppError('Incorrect e-mail/password combination', 401)
     }
 
     const { secret, expiresIn } = authConfig.jwt

@@ -3,3 +3,8 @@ export interface RequestToCreateUser {
   email: string
   password: string
 }
+
+export interface RequestToUpdateUserAvatar {
+  user_id: string
+  avatarFilename: string
+}
