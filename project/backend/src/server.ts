@@ -1,10 +1,12 @@
+import 'reflect-metadata'
 import express from 'express'
+import routes from './routes'
+import './database'
 
 const app = express()
 
-app.get('/', (request, response) => {
-  return response.json({ message: 'Hello World!' })
-})
+app.use(express.json())
+app.use(routes)
 
 app.listen(3333, () => {
   // eslint-disable-next-line no-console
