@@ -1,3 +1,4 @@
+import { Form } from '@unform/web'
 import styled from 'styled-components'
 import { shade } from 'polished'
 import background from '../../assets/png/sign-in-background.png'
@@ -25,7 +26,7 @@ export const Background = styled.div`
 
 export const Logo = styled.img``
 
-export const Form = styled.form`
+export const StyledForm = styled(Form)`
   margin: 80px 0;
   width: 340px;
   text-align: center;
