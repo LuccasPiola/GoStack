@@ -1,15 +1,19 @@
 import styled from 'styled-components'
+import { ContainerProps } from './types'
 
-export const Container = styled.div`
-  color: #666360;
+export const Container = styled.div<ContainerProps>`
+  color: ${({ isFocused, isFilled }) =>
+    isFocused || isFilled ? '#ff9000' : '#666360'};
   background: #232129;
   border-radius: 10px;
-  border: 2px solid #232129;
+  border: 2px solid;
+  border-color: ${({ isFocused }) => (isFocused ? '#ff9000' : '#232129')};
   padding: 16px;
   width: 100%;
   display: flex;
   flex: 1;
   align-items: center;
+  transition: color 0.5s ease, border-color 0.5s ease;
 
   svg {
     margin-right: 16px;
