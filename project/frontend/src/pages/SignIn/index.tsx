@@ -7,9 +7,12 @@ import Button from '../../components/Button'
 import Input from '../../components/Input'
 import useForm from '../../hooks/useForm'
 import * as S from './styles'
+import { SignInFormData } from './types'
+import { useAuthContext } from '../../context/AuthContext'
 
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null)
+  const { signIn } = useAuthContext()
   const [formIsValid] = useForm()
 
   const validateForm = useCallback(
@@ -32,14 +35,17 @@ const SignIn: React.FC = () => {
   )
 
   const handleSubmit = useCallback(
-    async formData => {
+    async (formData: SignInFormData) => {
       const isValid = await validateForm(formData)
 
       if (isValid) {
-        console.log(formData)
+        signIn({
+          email: formData.email,
+          password: formData.password,
+        })
       }
     },
-    [validateForm],
+    [validateForm, signIn],
   )
 
   return (
