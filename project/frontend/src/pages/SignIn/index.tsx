@@ -51,25 +51,27 @@ const SignIn: React.FC = () => {
   return (
     <S.Container>
       <S.Content>
-        <S.Logo src={logo} />
-        <S.StyledForm ref={formRef} onSubmit={handleSubmit}>
-          <S.Title>Faça seu logon</S.Title>
-          <Input placeholder="E-mail" icon={FiMail} name="email" />
-          <Input
-            placeholder="Senha"
-            icon={FiLock}
-            type="password"
-            name="password"
-          />
+        <S.AnimationContainer>
+          <S.Logo src={logo} />
+          <S.StyledForm ref={formRef} onSubmit={handleSubmit}>
+            <S.Title>Faça seu logon</S.Title>
+            <Input placeholder="E-mail" icon={FiMail} name="email" />
+            <Input
+              placeholder="Senha"
+              icon={FiLock}
+              type="password"
+              name="password"
+            />
 
-          <Button type="submit">Entrar</Button>
+            <Button type="submit">Entrar</Button>
 
-          <S.ForgotPassword href="#">Esqueci minha senha</S.ForgotPassword>
-        </S.StyledForm>
-        <S.CreateAccount href="#">
-          <FiLogIn />
-          Criar conta
-        </S.CreateAccount>
+            <S.ForgotPassword href="#">Esqueci minha senha</S.ForgotPassword>
+          </S.StyledForm>
+          <S.CreateAccount to="/signup">
+            <FiLogIn />
+            Criar conta
+          </S.CreateAccount>
+        </S.AnimationContainer>
       </S.Content>
       <S.Background />
     </S.Container>

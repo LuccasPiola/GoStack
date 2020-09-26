@@ -1,4 +1,5 @@
-export interface ToastProps {
-  type?: 'error' | 'success'
-  hasDescription?: boolean
+import { ToastMessage } from '../../context/ToastContext/types'
+
+export interface ToastContainerProps {
+  messages: ToastMessage[]
 }

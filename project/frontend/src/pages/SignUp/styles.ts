@@ -1,6 +1,17 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { shade } from 'polished'
+import { Link } from 'react-router-dom'
 import background from '../../assets/png/sign-up-background.png'
+
+const appearFromRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
 
 export const Container = styled.div`
   height: 100vh;
@@ -15,6 +26,14 @@ export const Content = styled.div`
   width: 100%;
   max-width: 700px;
   align-items: center;
+`
+
+export const AnimationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  animation: ${appearFromRight} 1s;
 `
 
 export const Background = styled.div`
@@ -47,7 +66,7 @@ export const ForgotPassword = styled.a`
   }
 `
 
-export const GoBack = styled.a`
+export const GoBack = styled(Link)`
   color: #fff;
   display: flex;
   align-items: center;

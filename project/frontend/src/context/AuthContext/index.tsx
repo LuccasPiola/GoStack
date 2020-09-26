@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useContext, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
 import { useToastContext } from '../ToastContext'
 import { AuthContextState, AuthState, SignInKeys } from './types'
@@ -15,6 +16,7 @@ const AuthProvider: React.FC = ({ children }) => {
     return {} as AuthState
   })
   const { addToast } = useToastContext()
+  const history = useHistory()
 
   const signIn = useCallback(
     async ({ email, password }: SignInKeys): Promise<void> => {
@@ -30,12 +32,18 @@ const AuthProvider: React.FC = ({ children }) => {
         localStorage.setItem('@Gobarber:user', JSON.stringify(user))
 
         setAuthData({ token, user })
+        history.push('/')
       } catch (error) {
         console.error(error)
-        addToast()
+        addToast({
+          type: 'error',
+          title: 'Erro na autenticação',
+          description:
+            'Ocorreu um erro ao fazer o login, cheque as credenciais',
+        })
       }
     },
-    [addToast],
+    [addToast, history],
   )
 
   const signOut = useCallback(() => {

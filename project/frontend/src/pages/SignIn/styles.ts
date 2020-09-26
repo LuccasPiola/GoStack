@@ -1,7 +1,18 @@
 import { Form } from '@unform/web'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { shade } from 'polished'
+import { Link } from 'react-router-dom'
 import background from '../../assets/png/sign-in-background.png'
+
+const appearFromLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`
 
 export const Container = styled.div`
   height: 100vh;
@@ -16,6 +27,15 @@ export const Content = styled.div`
   width: 100%;
   max-width: 700px;
   align-items: center;
+`
+
+export const AnimationContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  animation: ${appearFromLeft} 1s;
 `
 
 export const Background = styled.div`
@@ -48,7 +68,7 @@ export const ForgotPassword = styled.a`
   }
 `
 
-export const CreateAccount = styled.a`
+export const CreateAccount = styled(Link)`
   color: #ff9000;
   display: flex;
   align-items: center;
