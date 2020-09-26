@@ -8,7 +8,7 @@ import Button from '../../components/Button'
 import Input from '../../components/Input'
 import * as S from './styles'
 
-const SignIn: React.FC = () => {
+const SignUp: React.FC = () => {
   const navigation = useNavigation()
   return (
     <>
@@ -24,9 +24,10 @@ const SignIn: React.FC = () => {
           <S.Container>
             <Image source={logoImg} />
             <View>
-              <S.Title>Faça seu logon</S.Title>
+              <S.Title>Crie sua conta</S.Title>
             </View>
 
+            <Input name="name" icon="user" placeholder="Nome" />
             <Input name="email" icon="mail" placeholder="E-mail" />
             <Input name="password" icon="lock" placeholder="Senha" />
 
@@ -37,20 +38,16 @@ const SignIn: React.FC = () => {
             >
               Entrar
             </Button>
-
-            <S.ForgotPassword>
-              <S.ForgotPasswordText>Esqueci minha senha</S.ForgotPasswordText>
-            </S.ForgotPassword>
           </S.Container>
         </ScrollView>
 
-        <S.CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
-          <Icon name="log-in" size={20} color="#ff9000" />
-          <S.CreateAccountButtonText>Criar conta</S.CreateAccountButtonText>
-        </S.CreateAccountButton>
+        <S.BackToSignIn onPress={() => navigation.goBack()}>
+          <Icon name="arrow-left" size={20} color="#fff" />
+          <S.BackToSignInText>Voltar para logon</S.BackToSignInText>
+        </S.BackToSignIn>
       </KeyboardAvoidingView>
     </>
   )
 }
 
-export default SignIn
+export default SignUp

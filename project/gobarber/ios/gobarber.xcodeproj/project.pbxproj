@@ -18,7 +18,9 @@
 		36B4958A75E1425A5C8C84C7 /* libPods-gobarber-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5158EB364F05245AB014D8DD /* libPods-gobarber-tvOSTests.a */; };
 		71C17AEDC7E546825BECFD98 /* libPods-gobarber.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6C4BECFA93CBF7BE0B9BBF /* libPods-gobarber.a */; };
 		72E709845DAEBDCCCEC28EB9 /* libPods-gobarber-gobarberTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B33349446DD6719248D08828 /* libPods-gobarber-gobarberTests.a */; };
+		75A5D4BA77804E35AC2B288B /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3A3AA3C925B4F5E99D6C5C3 /* RobotoSlab-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B43FABEBE10A41E6B66EEF0F /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7166543A82394BE4AB9906EC /* RobotoSlab-Medium.ttf */; };
 		BA0D6047E8D8694D30B40134 /* libPods-gobarber-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EE0BEED0FCEE55F8BEDC50 /* libPods-gobarber-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -59,11 +61,13 @@
 		4876C9DFF6F0ACC928C38681 /* Pods-gobarber-gobarberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gobarber-gobarberTests.debug.xcconfig"; path = "Target Support Files/Pods-gobarber-gobarberTests/Pods-gobarber-gobarberTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5158EB364F05245AB014D8DD /* libPods-gobarber-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gobarber-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B78F4AE3A066603C6CD620C /* Pods-gobarber-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gobarber-tvOS.release.xcconfig"; path = "Target Support Files/Pods-gobarber-tvOS/Pods-gobarber-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		7166543A82394BE4AB9906EC /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Medium.ttf"; path = "../assets/fonts/RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = gobarber/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B126D5C5495202A05F403CD /* Pods-gobarber-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gobarber-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-gobarber-tvOSTests/Pods-gobarber-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		975853006A4A3741B38263DF /* Pods-gobarber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gobarber.release.xcconfig"; path = "Target Support Files/Pods-gobarber/Pods-gobarber.release.xcconfig"; sourceTree = "<group>"; };
 		B33349446DD6719248D08828 /* libPods-gobarber-gobarberTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gobarber-gobarberTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EE0BEED0FCEE55F8BEDC50 /* libPods-gobarber-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-gobarber-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A3AA3C925B4F5E99D6C5C3 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoSlab-Regular.ttf"; path = "../assets/fonts/RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F13E1F27A240A2F58E4A3B45 /* Pods-gobarber-gobarberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gobarber-gobarberTests.release.xcconfig"; path = "Target Support Files/Pods-gobarber-gobarberTests/Pods-gobarber-gobarberTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				DF738086F2913B92CDABF226 /* Pods */,
+				EFA668DA4CAD47FE9AFB4357 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -196,6 +201,16 @@
 			);
 			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EFA668DA4CAD47FE9AFB4357 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7166543A82394BE4AB9906EC /* RobotoSlab-Medium.ttf */,
+				E3A3AA3C925B4F5E99D6C5C3 /* RobotoSlab-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +357,8 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B43FABEBE10A41E6B66EEF0F /* RobotoSlab-Medium.ttf in Resources */,
+				75A5D4BA77804E35AC2B288B /* RobotoSlab-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,10 +459,42 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-gobarber/Pods-gobarber-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,10 +509,42 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-gobarber-gobarberTests/Pods-gobarber-gobarberTests-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
