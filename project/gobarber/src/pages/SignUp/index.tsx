@@ -2,28 +2,73 @@ import { useNavigation } from '@react-navigation/native'
 import { FormHandles } from '@unform/core'
 import React, { useCallback, useRef } from 'react'
 import {
+  Alert,
   Image,
   KeyboardAvoidingView,
   Platform,
   TextInput,
   View,
 } from 'react-native'
+import * as Yup from 'yup'
 import { ScrollView } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/Feather'
 import logoImg from '../../assets/logo.png'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
+import useForm from '../../hooks/useForm'
+import { SignUpFormData } from './types'
 import * as S from './styles'
+import api from '../../services/api'
 
 const SignUp: React.FC = () => {
   const navigation = useNavigation()
   const formRef = useRef<FormHandles>(null)
   const emailInputRef = useRef<TextInput>(null)
   const passwordInputRef = useRef<TextInput>(null)
+  const [formIsValid] = useForm()
 
-  const handleSignUp = useCallback((formData: Record<string, unknown>) => {
-    console.log(formData)
-  }, [])
+  const validateForm = useCallback(
+    async formData => {
+      const shape = {
+        name: Yup.string().required('Nome obrigatório'),
+        email: Yup.string()
+          .required('E-mail obrigatório')
+          .email('Digite um e-mail válido'),
+        password: Yup.string().min(6, 'No mínimo 6 caracteres'),
+      }
+      const isValid = await formIsValid({
+        formData,
+        formRef,
+        shape,
+      })
+
+      return isValid
+    },
+    [formIsValid],
+  )
+
+  const handleSubmit = useCallback(
+    async (formData: SignUpFormData) => {
+      const isValid = await validateForm(formData)
+
+      if (isValid) {
+        try {
+          await api.post('/users', formData)
+          Alert.alert(
+            'Cadastro realizado!',
+            'Você já pode fazer seu logon no GoBarber!',
+          )
+          navigation.goBack()
+        } catch {
+          Alert.alert(
+            'Erro no cadastro',
+            'Ocorreu um erro ao fazer o cadastro, tente novamente',
+          )
+        }
+      }
+    },
+    [validateForm, navigation],
+  )
   return (
     <>
       <KeyboardAvoidingView
@@ -41,7 +86,7 @@ const SignUp: React.FC = () => {
               <S.Title>Crie sua conta</S.Title>
             </View>
 
-            <S.Form onSubmit={handleSignUp} ref={formRef}>
+            <S.Form onSubmit={handleSubmit} ref={formRef}>
               <Input
                 name="name"
                 icon="user"

@@ -15,6 +15,12 @@ export const Container = styled.View<StyledContainerProps>`
   flex-direction: row;
   align-items: center;
 
+  ${({ hasError }) =>
+    hasError &&
+    css`
+      border-color: #c53030;
+    `}
+
   ${({ hasFocus }) =>
     hasFocus &&
     css`

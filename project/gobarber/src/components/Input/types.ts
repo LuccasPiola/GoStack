@@ -15,4 +15,5 @@ export interface InputRef {
 
 export interface StyledContainerProps {
   hasFocus: boolean
+  hasError: boolean
 }

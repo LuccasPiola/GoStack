@@ -7,6 +7,7 @@ import {
   View,
   TextInput,
 } from 'react-native'
+import * as Yup from 'yup'
 import { ScrollView } from 'react-native-gesture-handler'
 import Icon from 'react-native-vector-icons/Feather'
 import { FormHandles } from '@unform/core'
@@ -14,15 +15,49 @@ import logoImg from '../../assets/logo.png'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
 import * as S from './styles'
+import { useAuthContext } from '../../context/AuthContext'
+import useForm from '../../hooks/useForm'
+import { SignInFormData } from './types'
 
 const SignIn: React.FC = () => {
   const navigation = useNavigation()
   const formRef = useRef<FormHandles>(null)
   const passwordInputRef = useRef<TextInput>(null)
+  const { signIn } = useAuthContext()
+  const [formIsValid] = useForm()
 
-  const handleSignIn = useCallback((formData: Record<string, unknown>) => {
-    console.log(formData)
-  }, [])
+  const validateForm = useCallback(
+    async formData => {
+      const shape = {
+        email: Yup.string()
+          .required('E-mail obrigatório')
+          .email('Digite um e-mail válido'),
+        password: Yup.string().required('Senha obrigatória'),
+      }
+      const isValid = await formIsValid({
+        formData,
+        formRef,
+        shape,
+      })
+
+      return isValid
+    },
+    [formIsValid],
+  )
+
+  const handleSubmit = useCallback(
+    async (formData: SignInFormData) => {
+      const isValid = await validateForm(formData)
+
+      if (isValid) {
+        await signIn({
+          email: formData.email,
+          password: formData.password,
+        })
+      }
+    },
+    [validateForm, signIn],
+  )
 
   return (
     <>
@@ -40,7 +75,7 @@ const SignIn: React.FC = () => {
             <View>
               <S.Title>Faça seu logon</S.Title>
             </View>
-            <S.Form onSubmit={handleSignIn} ref={formRef}>
+            <S.Form onSubmit={handleSubmit} ref={formRef}>
               <Input
                 name="email"
                 icon="mail"
