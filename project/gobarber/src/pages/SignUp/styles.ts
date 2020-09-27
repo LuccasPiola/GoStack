@@ -1,4 +1,5 @@
 import { Platform } from 'react-native'
+import { Form as UnformForm } from '@unform/mobile'
 import { getBottomSpace } from 'react-native-iphone-x-helper'
 import styled from 'styled-components/native'
 
@@ -14,6 +15,10 @@ export const Title = styled.Text`
   color: #fff;
   font-family: 'RobotoSlab-Medium';
   margin: 64px 0 24px;
+`
+
+export const Form = styled(UnformForm)`
+  width: 100%;
 `
 
 export const BackToSignIn = styled.TouchableOpacity`
