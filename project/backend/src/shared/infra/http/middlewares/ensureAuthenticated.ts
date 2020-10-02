@@ -1,8 +1,8 @@
+import authConfig from '@config/auth'
+import { TokenPayload } from '@modules/users/interfaces/Sessions'
+import AppError from '@shared/errors/AppError'
 import { NextFunction, Request, Response } from 'express'
 import { verify } from 'jsonwebtoken'
-import { TokenPayload } from '../interfaces/Sessions'
-import authConfig from '../config/auth'
-import AppError from '../errors/AppError'
 
 const ensureAuthenticated = (
   request: Request,
